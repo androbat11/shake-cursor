@@ -50,15 +50,6 @@ shake-cursor/src/
 
 **config.rs** provides a builder for configuration parameters, with sensible defaults that can be overridden via command-line arguments.
 
-### Design Patterns
-
-| Pattern | Where | Purpose |
-|---|---|---|
-| Strategy | `DisplayBackend` trait | Abstract X11/Wayland behind a common interface |
-| State Machine | Cursor state (Idle / Enlarged / Restoring) | Manage transitions between cursor sizes |
-| Observer | X11 event subscription | React to mouse motion without polling |
-| Ring Buffer | `VecDeque` in detector | Constant memory usage for a long-running daemon |
-| Builder | Config construction | Flexible configuration with defaults |
 
 ## Configuration
 
